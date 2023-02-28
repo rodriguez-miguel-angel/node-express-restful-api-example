@@ -4,6 +4,8 @@ import { addNewContact,
     updateContact, 
     deleteContact } from '../controllers/contactController';
 
+import { loginRequired } from '../controllers/userController';
+
 const routes = (app) => {
     app.route('/contacts')
     // retrieve contacts
@@ -19,8 +21,12 @@ const routes = (app) => {
         */
        /*
         version-02:
+        getContacts
        */
-       getContacts
+      /*
+        version-03:
+      */
+        loginRequired, getContacts
     )
     // create contact
     .post(/*
@@ -29,14 +35,22 @@ const routes = (app) => {
             res.send('POST request sucessful!') 
            */
           /*
-          version-02:
+            version-02:
+            addNewContact
           */
-          addNewContact
+         /*
+            version-03:
+         */
+        loginRequired, addNewContact
     );
 
     app.route('/contacts/:contactId')
     // retrieve contact
+    /*
+    version-01:
     .get(getContactWithID)
+    */
+    .get(loginRequired, getContactWithID)
 
     // update contact
     .put(
@@ -45,7 +59,14 @@ const routes = (app) => {
         (req, res) =>
         res.send('PUT request sucessful!')
         */
+        /*
+        version-02:
         updateContact
+        */
+        /*
+        version-03:
+        */
+        loginRequired, updateContact
     )
     // delete contact
     .delete(
@@ -54,10 +75,14 @@ const routes = (app) => {
         (req, res) =>
         res.send('DELETE request sucessful!')
         */
-       /*
-       version-02:
-       */
-       deleteContact
+        /*
+        version-02:
+        deleteContact 
+        */
+        /*
+        version-03:
+        */
+        loginRequired, deleteContact
     );
 };
 
