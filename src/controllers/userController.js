@@ -57,7 +57,15 @@ export const login = (req,res) => {
                // security measure. prevent a specific message sent back to the user or the frontend that can compromise the integrity of the application.
                res.status(401).json({ message: 'Authentication failed. Either user was not found or password was not correct'});
             } else {
-                const token = jwt.sign({ email: user.email, username: user.username, _id: user.id}, process.env.JWT_SECRET, { expiresIn: '2h' });
+                
+                const payload = {
+                    _id: user.id,
+                    username: user.username,
+                    email: user.email
+                };
+                
+                const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '2h' });
+                
                 return res.json({
                     message: 'Authentication successful.',
                     token: token
