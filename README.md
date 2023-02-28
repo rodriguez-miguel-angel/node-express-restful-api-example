@@ -16,4 +16,4 @@ Postman.
 "Time erodes gratitude more quickly than it does beauty." - Puzo, Mario. The Godfather.
 
 ## Lyrics of the Day
-"Gotta move smarter; gotta move harder." - Rich, Roddy. The Box.
+"Gotta move smarter; gotta move harder." - Ricch, Roddy. The Box.
