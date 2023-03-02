@@ -8,9 +8,9 @@ See <https://www.linkedin.com/learning/building-restful-apis-with-node-js-and-ex
 See <https://www.linkedin.com/learning/node-js-securing-restful-apis-2>.
 
 ## Technologies.
-Git.
-MongoDB Compass.
-Postman.
+  * Git.
+  * MongoDB Compass.
+  * Postman.
 
 ## Quote of the Day
 "Time erodes gratitude more quickly than it does beauty." - Puzo, Mario. The Godfather.
