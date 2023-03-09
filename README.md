@@ -1,5 +1,5 @@
 # node-express-restful-api-example. Building RESTful APIs with Node.js and Express. Node.js: Securing RESTful APIs.
-LinkedIn Learning Courses by Emmanual Henri on Node-Express RestfulAPI using a JSON Web Token (JWT).
+LinkedIn Learning Courses by Emmanuel Henri on Node-Express RestfulAPI using a JSON Web Token (JWT).
 
 ## original source [main-branch]
 See <https://www.linkedin.com/learning/building-restful-apis-with-node-js-and-express-16069959>.
